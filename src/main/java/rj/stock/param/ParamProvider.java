@@ -11,8 +11,8 @@ import java.util.Date;
 public class ParamProvider implements IParamProvider {
 
     private final static SimpleDateFormat ParseFormat = new SimpleDateFormat("yyyy-MM-dd");
-    private String cookiePath;
-    private String fetchDate;
+    private final String cookiePath;
+    private final String fetchDate;
 
     public ParamProvider(String cp, String fd) {
         this.cookiePath = cp;

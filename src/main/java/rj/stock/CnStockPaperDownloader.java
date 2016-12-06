@@ -28,7 +28,7 @@ public class CnStockPaperDownloader {
     private static final SimpleDateFormat Uf2 = new SimpleDateFormat("yyyyMMdd");
     private static final SimpleDateFormat StoreFolderFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    private IParamProvider provider;
+    private final IParamProvider provider;
 
 
     public CnStockPaperDownloader(IParamProvider pd) {
