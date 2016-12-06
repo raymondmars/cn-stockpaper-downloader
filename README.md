@@ -13,6 +13,9 @@ c. java -jar ./cnstock_downloader-1.0-jar-with-dependencies.jar yyyy-MM-dd cooki
 
 ###注意：
 a 和 b 需要预先 copy 你当前阅读电子版页面的 cookie 内容，存储到程序所在目录的 site_cookie 文件中。     
-记住这个不是盗取内容的程序，只是针对订阅了《上海证券报》- 电子版 的用户有效。
+记住这个不是盗取内容的程序，只是针对订阅了《上海证券报》- 电子版 的用户有效。    
+
+##运行时要求：   
+Java 1.8   
 
 
