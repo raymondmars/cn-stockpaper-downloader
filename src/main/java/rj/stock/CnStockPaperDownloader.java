@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * Created by Raymond on 04/12/2016.
  */
-public class CnStockPaperDownloader {
+public final class CnStockPaperDownloader {
 
     private static final String CnStock_Paper_Host = "http://paper.cnstock.com";
     private static final String MockAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36";

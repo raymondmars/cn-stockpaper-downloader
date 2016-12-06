@@ -11,7 +11,8 @@ import java.io.IOException;
  * CN Stock Paper PDF downloader
  *
  */
-public class App {
+public final class App {
+
     public static void main( String[] args ) {
         String fetchDate = args.length > 0 ? args[0] : null;
         String cookiePath = args.length > 1 ? args[1] : null;

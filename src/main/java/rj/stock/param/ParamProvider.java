@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Created by Raymond on 04/12/2016.
  */
-public class ParamProvider implements IParamProvider {
+public final class ParamProvider implements IParamProvider {
 
     private final static SimpleDateFormat ParseFormat = new SimpleDateFormat("yyyy-MM-dd");
     private final String cookiePath;
