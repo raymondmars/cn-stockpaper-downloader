@@ -50,9 +50,9 @@ public final class CnStockPaperDownloader {
             String[] kp = c.split("=");
             map.put(kp[0], kp[1]);
         }
-        for(int i = 1 ; i <= 10 ; i++) {
+        for(int i = 1 ; i <= 11 ; i++) {
             String targetUrl = getDownloadUrl(i);
-            Connection.Response resp = Jsoup.connect(targetUrl).userAgent(MockAgent).cookies(map).maxBodySize(MaxDownloadFileSize).timeout(ReadTimeOut).ignoreContentType(true).execute();
+            Connection.Response resp = Jsoup.connect(targetUrl).userAgent(MockAgent).cookies(map).header("Host","paper.cnstock.com").maxBodySize(MaxDownloadFileSize).timeout(ReadTimeOut).ignoreContentType(true).execute();
             if(resp.statusCode() == 200 && resp.bodyAsBytes().length > 0) {
                 if(resp.contentType().equals("application/pdf")) {
                     FileOutputStream fs = new FileOutputStream(new File(String.format("%s/%d.pdf", storePath, i)));
