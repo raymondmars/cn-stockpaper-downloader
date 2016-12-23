@@ -15,8 +15,9 @@ public final class App {
 
     public static void main( String[] args ) {
         String fetchDate = args.length > 0 ? args[0] : null;
-        String cookiePath = args.length > 1 ? args[1] : null;
-        IParamProvider provider = new ParamProvider(cookiePath, fetchDate);
+        String username  = args.length > 1 ? args[1] : null;
+        String password  = args.length > 2 ? args[2] : null;
+        IParamProvider provider = new ParamProvider(fetchDate, username, password);
 
         CnStockPaperDownloader cnd = new CnStockPaperDownloader(provider);
         try {

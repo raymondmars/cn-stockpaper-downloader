@@ -11,26 +11,46 @@ import java.util.Date;
 public final class ParamProvider implements IParamProvider {
 
     private final static SimpleDateFormat ParseFormat = new SimpleDateFormat("yyyy-MM-dd");
-    private final String cookiePath;
     private final String fetchDate;
+    //set default value
+    private String userName = System.getenv("_CNSTOCK_USERNAME_");
+    private String passWord = System.getenv("_CNSTOCK_PASSWORD_");
 
-    public ParamProvider(String cp, String fd) {
-        this.cookiePath = cp;
+    public ParamProvider(String fd, String username, String password) {
         this.fetchDate = fd;
+        if(username != null && username.trim().length() > 0) {
+            this.userName  = username;
+        }
+        if(password != null && password.trim().length() > 0) {
+            this.passWord  = password;
+        }
+    }
+
+    public ParamProvider(String fd) {
+        this.fetchDate = fd;
+    }
+//    @Override
+//    public String getCookieStorePath() {
+//        if(this.cookiePath != null) {
+//            return this.cookiePath;
+//        } else {
+//            String defaultPath = String.format("%s/site_cookie", System.getProperty("user.dir"));
+//            File file = new File(defaultPath);
+//            if(!file.exists()) {
+//                throw new RuntimeException(String.format("cookie file is not exist: ", defaultPath));
+//            }
+//            return defaultPath;
+//        }
+//    }
+
+    @Override
+    public String getUserName() {
+        return this.userName;
     }
 
     @Override
-    public String getCookieStorePath() {
-        if(this.cookiePath != null) {
-            return this.cookiePath;
-        } else {
-            String defaultPath = String.format("%s/site_cookie", System.getProperty("user.dir"));
-            File file = new File(defaultPath);
-            if(!file.exists()) {
-                throw new RuntimeException(String.format("cookie file is not exist: ", defaultPath));
-            }
-            return defaultPath;
-        }
+    public String getPassword() {
+        return this.passWord;
     }
 
     @Override
