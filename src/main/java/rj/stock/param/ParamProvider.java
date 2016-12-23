@@ -13,8 +13,8 @@ public final class ParamProvider implements IParamProvider {
     private final static SimpleDateFormat ParseFormat = new SimpleDateFormat("yyyy-MM-dd");
     private final String fetchDate;
     //set default value
-    private String userName = System.getenv("_CNSTOCK_USERNAME_");
-    private String passWord = System.getenv("_CNSTOCK_PASSWORD_");
+    private String userName = System.getenv("CNSTOCK_USERNAME");
+    private String passWord = System.getenv("CNSTOCK_PASSWORD");
 
     public ParamProvider(String fd, String username, String password) {
         this.fetchDate = fd;

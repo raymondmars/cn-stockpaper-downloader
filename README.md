@@ -19,7 +19,7 @@ b. java -jar ./cnstock_downloader-1.0-jar-with-dependencies.jar yyyy-MM-dd  # �
 c. java -jar ./cnstock_downloader-1.0-jar-with-dependencies.jar yyyy-MM-dd username password  # 下载指定某一天的所有PDF,并指定登陆用户名和密码     
 
 ###注意：
-a 和 b 如果不指定用户名和密码，请将用户名和密码存储到环境变量里面，程序会自动读取。 用户名和密码的环境变量名称需要设置为：_CNSTOCK_USERNAME\_ 和 _CNSTOCK_PASSWORD\_     
+a 和 b 如果不指定用户名和密码，请将用户名和密码存储到环境变量里面，程序会自动读取。 用户名和密码的环境变量名称需要设置为：CNSTOCK_USERNAME 和 CNSTOCK_PASSWORD     
 记住这个只是针对订阅了《上海证券报》- 电子版 的用户有效。    
 
  
