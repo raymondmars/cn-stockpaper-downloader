@@ -27,21 +27,8 @@ public final class ParamProvider implements IParamProvider {
     }
 
     public ParamProvider(String fd) {
-        this.fetchDate = fd;
+        this(fd, null,null);
     }
-//    @Override
-//    public String getCookieStorePath() {
-//        if(this.cookiePath != null) {
-//            return this.cookiePath;
-//        } else {
-//            String defaultPath = String.format("%s/site_cookie", System.getProperty("user.dir"));
-//            File file = new File(defaultPath);
-//            if(!file.exists()) {
-//                throw new RuntimeException(String.format("cookie file is not exist: ", defaultPath));
-//            }
-//            return defaultPath;
-//        }
-//    }
 
     @Override
     public String getUserName() {

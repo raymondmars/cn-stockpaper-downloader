@@ -49,13 +49,7 @@ public final class CnStockPaperDownloader {
         if(!file.exists() && !file.isDirectory()) {
             file.mkdir();
         }
-//        String cookieContent = new String(Files.readAllBytes(Paths.get(this.provider.getCookieStorePath()))).replace("\n","");
-//        String[] ca = cookieContent.split(";");
         Map<String, String> map = this.getLogonCookies();
-//        for(String c : ca) {
-//            String[] kp = c.split("=");
-//            map.put(kp[0], kp[1]);
-//        }
         for(int i = 1 ; i <= 11 ; i++) {
             String targetUrl = getDownloadUrl(i);
             Connection.Response resp = Jsoup.connect(targetUrl).userAgent(MockAgent).cookies(map).header("Host","paper.cnstock.com").maxBodySize(MaxDownloadFileSize).timeout(ReadTimeOut).ignoreContentType(true).execute();
